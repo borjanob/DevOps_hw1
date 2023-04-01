@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("borjanob/KIII_domasno1")
+       app = docker.build("borjanob/kiii_domasno1")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerCredentials') {
